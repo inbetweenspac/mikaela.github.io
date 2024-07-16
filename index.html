@@ -7,19 +7,21 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
+        background-color: #000;
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        overflow: hidden;
     }
     .container {
         max-width: 800px;
         text-align: center;
         padding: 20px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
@@ -29,6 +31,7 @@
     p {
         font-size: 1.2em;
         line-height: 1.6;
+        color: #333;
     }
     .btn {
         display: inline-block;
@@ -59,38 +62,75 @@
     .explore-option:hover {
         background-color: #7b1fa2;
     }
-    .heart {
-        display: inline-block;
-        font-size: 3em;
-        color: #e91e63;
-        animation: heartbeat 1s infinite;
+    .message {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    @keyframes heartbeat {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
+    .message.active {
+        display: block;
     }
 </style>
 </head>
 <body>
     <div class="container">
-        <h1><span class="heart">&hearts;</span> Welcome to Our Love Page <span class="heart">&hearts;</span></h1>
-        <p>Expressing love through interactive buttons and animations!</p>
-        <a href="#" class="btn">Send a Love Message</a>
-        <a href="#" class="btn">View Our Love Story</a>
-        <a href="#" class="btn">Explore Romantic Places</a>
+        <h1>Meant for the one and only Mikaela,</h1>
+        <p>ini jam setengah 1 aku ngantuk laper haus kalo ada error pura pura gak liat aja, mau custom domain tadinya tapi minimal nunggu 24 jam keburu lupa</p>
+        <a href="#love-message" class="btn">Message</a>
+        <a href="#love-story" class="btn">Reasons why</a>
+        <a href="#romantic-places" class="btn">Home</a>
+        
+        <div id="love-message" class="message">
+            <h2>00:32 and I love you</h2>
+            <p>Here's a heartfelt message to my love...</p>
+            <p>"You are the sunshine of my life, and I cherish every moment we spend together. You make me smile like no one else can. I love you more than words can express."</p>
+        </div>
+        
+        <div id="love-story" class="message">
+            <h2>Our Love Story</h2>
+            <p>Our love story began...</p>
+            <p>Insert your beautiful love story here...</p>
+        </div>
+        
+        <div id="romantic-places" class="message">
+            <h2>Test</h2>
+            <p>Yes</p>
+            <ul>
+                <li>Rome, Italy</li>
+                <li>Paris, France</li>
+                <li>Santorini, Greece</li>
+                <li>Maldives</li>
+            </ul>
+        </div>
+        
         <div class="explore-section">
             <p>Explore more:</p>
-            <a href="#" class="explore-option">Romantic Gifts</a>
-            <a href="#" class="explore-option">Love Poems</a>
-            <a href="#" class="explore-option">Date Night Ideas</a>
+            <a href="#" class="explore-option">hi</a>
+            <a href="#" class="explore-option">1</a>
+            <a href="#" class="explore-option">am</a>
         </div>
     </div>
+
+    <script>
+        // JavaScript to handle showing and hiding messages
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const target = this.getAttribute('href').substring(1);
+                const message = document.getElementById(target);
+                
+                // Hide all messages
+                document.querySelectorAll('.message').forEach(msg => {
+                    msg.classList.remove('active');
+                });
+                
+                // Show the selected message
+                message.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
