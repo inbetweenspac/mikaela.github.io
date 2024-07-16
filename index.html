@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love-themed Interactive Page</title>
+<title>Mikaela</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -85,66 +85,188 @@
         
         <div id="love-message" class="message">
             <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Love Letter</title>
+                <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Pen+Script" rel="stylesheet">
+                <style>
+                    body {
+                        font-family: 'Indie Flower', cursive;
+                        background-color: #f8f8f8;
+                        margin: 0;
+                        padding: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                    }
+                    .aletter {
+                        max-width: 600px;
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        line-height: 1.6;
+                    }
+                    .tomy {
+                        font-family: 'Nanum Pen Script', cursive;
+                        font-size: 1.2em;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .tomy:first-child {
+                        text-indent: 0;
+                        font-size: 1.5em;
+                    }
+                    .tomy:last-child {
+                        text-indent: 90px;
+                        margin-top: 20px;
+                    }
+                    .aletter i {
+                        font-style: italic;
+                    }
+                </style>
+                </head>
+                <body>
+                    <div class="aletter">
+                        <div class="tomy">Axel,</div>
+                        <br>
+                        I like you.<br>
+                        I like you a lot. Even when you're angry, or when you're so caught up in working hard, I really like you.<br>
+                        When I struggle, it's like you're always there to help me get back on track. You've never let me down.<br>
+                        Remember in art class, and how you kept breaking the pencil lead, and I came over and helped you? It felt really nice to hold your hand. I want more moments like that. I want to help <i>you</i> as much as you help me.<br>
+                        I want you to be happy, and I want to be the one to make you feel happy.<br><br>
+                        <div class="tomy" style="text-indent: 90px;">Love, Mara</div>
+                    </div>
+                </body>
+        </div>
+        
+        <div id="love-story" class="message">
+            <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Love Letter</title>
-            <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Pen+Script" rel="stylesheet">
+            <title>Love Note in Envelope</title>
             <style>
                 body {
-                    font-family: 'Indie Flower', cursive;
                     background-color: #f8f8f8;
-                    margin: 0;
-                    padding: 20px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 100vh;
+                    margin: 0;
+                    font-family: Arial, sans-serif;
                 }
-                .aletter {
-                    max-width: 600px;
+                .scissors {
+                    position: relative;
+                    width: 300px;
+                }
+                .envelop {
+                    position: relative;
+                    width: 100%;
+                    max-width: 300px;
                     background-color: #fff;
-                    padding: 20px;
                     border-radius: 10px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                }
+                .envelop__front-paper, .envelop__back-paper, .envelop__up-paper, .envelop__sticker, .envelop__false-sticker {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .envelop__front-paper {
+                    background-color: #fff;
+                    z-index: 1;
+                }
+                .envelop__back-paper {
+                    background-color: #f5f5f5;
+                    z-index: 2;
+                    transform: translateY(10px);
+                }
+                .envelop__up-paper {
+                    background-color: #ffffff;
+                    z-index: 3;
+                    transform: translateY(20px);
+                    transition: transform 0.3s ease;
+                }
+                .envelop:hover .envelop__up-paper {
+                    transform: translateY(0);
+                }
+                .envelop__sticker {
+                    background-color: #f44336;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    z-index: 4;
+                    top: 10px;
+                    left: 10px;
+                }
+                .envelop__false-sticker {
+                    background-color: #f44336;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    z-index: 5;
+                    top: 30px;
+                    left: 30px;
+                }
+                .envelop__content {
+                    padding: 20px;
+                    display: none;
+                }
+                .envelop:hover .envelop__content {
+                    display: block;
+                }
+                .note {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    background-color: #ffffcc;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+                .note__text {
                     line-height: 1.6;
                 }
-                .tomy {
-                    font-family: 'Nanum Pen Script', cursive;
-                    font-size: 1.2em;
-                    text-align: center;
-                    margin-bottom: 10px;
-                }
-                .tomy:first-child {
-                    text-indent: 0;
-                    font-size: 1.5em;
-                }
-                .tomy:last-child {
-                    text-indent: 90px;
-                    margin-top: 20px;
-                }
-                .aletter i {
-                    font-style: italic;
+                .note__text p {
+                    margin: 0;
                 }
             </style>
             </head>
             <body>
-                <div class="aletter">
-                    <div class="tomy">Axel,</div>
-                    <br>
-                    I like you.<br>
-                    I like you a lot. Even when you're angry, or when you're so caught up in working hard, I really like you.<br>
-                    When I struggle, it's like you're always there to help me get back on track. You've never let me down.<br>
-                    Remember in art class, and how you kept breaking the pencil lead, and I came over and helped you? It felt really nice to hold your hand. I want more moments like that. I want to help <i>you</i> as much as you help me.<br>
-                    I want you to be happy, and I want to be the one to make you feel happy.<br><br>
-                    <div class="tomy" style="text-indent: 90px;">Love, Mara</div>
+                <div class="scissors">
+                    <div class="envelop">
+                        <div class="envelop__front-paper"></div>
+                        <div class="envelop__back-paper"></div>
+                        <div class="envelop__up-paper js-up-paper"></div>
+                        <div class="envelop__sticker js-sticker"></div>
+                        <div class="envelop__false-sticker"></div>
+                        <div class="envelop__content js-envelop-content">
+                            <div class="love-notes">
+                                <div class="note js-note">
+                                    <div class="note__text">
+                                        <p>Hola amor, te quiero dar las gracias por todo, por las alegrías, por las risas, por los lindos momentos pero, también por los malos, porque aunque haya malos momentos...</p>
+                                    </div>
+                                </div>
+                                <div class="note js-note">
+                                    <div class="note__text">
+                                        <p>quiero pasarlos contigo, luchar y superarlos juntos. La verdad eres muy importante para mi, amo lo que tenemos juntos y sé que podemos mejorar y mantenerlo si los dos queremos y créeme que yo quiero.</p>
+                                    </div>
+                                </div>
+                                <div class="note js-note">
+                                    <div class="note__text">
+                                        <p>En verdad te amo y se que podemos lograrlo, y lo intentare hasta que ya no este en mis manos, porque no estoy contigo por necesidad ni por superficialidad, estoy contigo por elección.</p>
+                                        <p>Te amo mensa &hearts;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </body>
-        </div>
-        
-        <div id="love-story" class="message">
-            <h2>Our Love Story</h2>
-            <p>Our love story began...</p>
-            <p>Insert your beautiful love story here...</p>
+            </html>
+            
         </div>
         
         <div id="romantic-places" class="message">
