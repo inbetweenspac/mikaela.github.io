@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love-themed Interactive Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 800px;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #e91e63;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e91e63;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #c2185b;
+    }
+    .explore-section {
+        margin-top: 30px;
+    }
+    .explore-option {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #9c27b0;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px;
+        transition: background-color 0.3s;
+    }
+    .explore-option:hover {
+        background-color: #7b1fa2;
+    }
+    .heart {
+        display: inline-block;
+        font-size: 3em;
+        color: #e91e63;
+        animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="heart">&hearts;</span> Welcome to Our Love Page <span class="heart">&hearts;</span></h1>
+        <p>Expressing love through interactive buttons and animations!</p>
+        <a href="#" class="btn">Send a Love Message</a>
+        <a href="#" class="btn">View Our Love Story</a>
+        <a href="#" class="btn">Explore Romantic Places</a>
+        <div class="explore-section">
+            <p>Explore more:</p>
+            <a href="#" class="explore-option">Romantic Gifts</a>
+            <a href="#" class="explore-option">Love Poems</a>
+            <a href="#" class="explore-option">Date Night Ideas</a>
+        </div>
+    </div>
+</body>
+</html>
