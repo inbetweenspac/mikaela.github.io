@@ -1,136 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love-themed Interactive Page</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-        overflow: hidden;
-    }
-    .container {
-        max-width: 800px;
-        text-align: center;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-        color: #e91e63;
-    }
-    p {
-        font-size: 1.2em;
-        line-height: 1.6;
-        color: #333;
-    }
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #e91e63;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 10px;
-        transition: background-color 0.3s;
-    }
-    .btn:hover {
-        background-color: #c2185b;
-    }
-    .explore-section {
-        margin-top: 30px;
-    }
-    .explore-option {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #9c27b0;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 10px;
-        transition: background-color 0.3s;
-    }
-    .explore-option:hover {
-        background-color: #7b1fa2;
-    }
-    .message {
-        display: none;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .message.active {
-        display: block;
-    }
-</style>
-</head>
-<body>
-    <div class="container">
-        <h1>Meant for the one and only Mikaela,</h1>
-        <p>ini jam setengah 1 aku ngantuk laper haus kalo ada error pura pura gak liat aja, mau custom domain tadinya tapi minimal nunggu 24 jam keburu lupa</p>
-        <a href="#love-message" class="btn">Message</a>
-        <a href="#love-story" class="btn">Reasons why</a>
-        <a href="#romantic-places" class="btn">Home</a>
-        
-        <div id="love-message" class="message">
-            <h2>00:32 and I love you</h2>
-            <p>Here's a heartfelt message to my love...</p>
-            <p>"You are the sunshine of my life, and I cherish every moment we spend together. You make me smile like no one else can. I love you more than words can express."</p>
-        </div>
-        
-        <div id="love-story" class="message">
-            <h2>Our Love Story</h2>
-            <p>Our love story began...</p>
-            <p>Insert your beautiful love story here...</p>
-        </div>
-        
-        <div id="romantic-places" class="message">
-            <h2>Test</h2>
-            <p>Yes</p>
-            <ul>
-                <li>Rome, Italy</li>
-                <li>Paris, France</li>
-                <li>Santorini, Greece</li>
-                <li>Maldives</li>
-            </ul>
-        </div>
-        
-        <div class="explore-section">
-            <p>Explore more:</p>
-            <a href="#" class="explore-option">hi</a>
-            <a href="#" class="explore-option">1</a>
-            <a href="#" class="explore-option">am</a>
-        </div>
-    </div>
+<html lang="en" dir="ltr">
 
-    <script>
-        // JavaScript to handle showing and hiding messages
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                const target = this.getAttribute('href').substring(1);
-                const message = document.getElementById(target);
-                
-                // Hide all messages
-                document.querySelectorAll('.message').forEach(msg => {
-                    msg.classList.remove('active');
-                });
-                
-                // Show the selected message
-                message.classList.add('active');
-            });
-        });
-    </script>
-</body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Life of John Steinbeck</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <section class="header__container">
+      <h1 class="heading-main-lev">
+        <span class="heading-main-lev--main">John Steinbeck</span>
+        <span class="heading-main-lev--sub"> The Classic Novelist of the Broken American Dream</span>
+      </h1>
+    </section>
+  </header>
+
+  <main class="main">
+
+    <section class="biography-page u-padding-top-large">
+      <hr class="line-break">
+      <h3 class="heading-section-lev u-padding-bottom-small u-padding-top-small test">
+        The life of Steinbeck
+      </h3>
+      <hr class="line-break">
+      <div class="u-padding-bottom-large u-padding-top-large">
+        <article class="biography__article">
+          <p class="biography__article--column">
+            John Steinbeck was an American novelist whose Pulitzer Prize-winning novel, The Grapes of Wrath, portrayed the plight of migrant workers during the Great Depression.
+          </p>
+          <p class="biography__article--column">
+            John Ernst Steinbeck Jr. (February 27, 1902 - December 20, 1968) was a Nobel and Pulitzer Prize-winning American novelist and the author of Of Mice and Men, The Grapes of Wrath and East of Eden as well as other novels, Cannery Row and Tortilla Flat.
+          </p>
+          <p class="biography__article--column">
+            Steinbeck dropped out of college and worked as a manual laborer before achieving success as a writer. His works often dealt with social and economic issues. His 1939 novel, The Grapes of Wrath, about the migration of a family from the Oklahoma Dust Bowl to California, won a Pulitzer Prize and a National Book Award.
+          </p>
+          <p class="biography__article--column">
+            Steinbeck served as a war correspondent during World War II, and he was awarded the Nobel Prize for Literature in 1962.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portrait-page">
+      <div class="portrait-page__qt-container">
+        <div class="portrait-page__inner-qt-container">
+          <q class="portrait-page__qt">
+            I wonder how many people I've looked at all my life and never seen.
+          </q>
+        </div>
+      </div>
+    </section>
+
+    <section class="novels-page u-padding-top-small">
+      <hr class="line-break">
+      <h3 class="heading-section-lev u-padding-bottom-small u-padding-top-small">
+        The Book Collection
+      </h3>
+      <hr class="line-break">
+      <p class="basic-text--center u-padding-top-medium">
+        Click or tap on the book for more information.
+      </p>
+      <div class="u-padding-bottom-large u-padding-top-large">
+        <section class="novels-page__images">
+          <div class="novels-page__image--container novels-page__img-gow">
+            <img src="https://i.pinimg.com/736x/65/6d/a4/656da452a7aae20f76900380956dc538.jpg" alt="" class="novels-page__image--img">
+          </div>
+          <div class="novels-page__image--container novels-page__img-omm">
+            <img src="https://project-img-holder.s3.eu-west-2.amazonaws.com/fcc-john-steinbeck-tribute-page/images/of-mice-and-men.jpg" alt="" class="novels-page__image--img">
+          </div>
+          <div class="novels-page__image--container novels-page__img-tp">
+            <img src="https://project-img-holder.s3.eu-west-2.amazonaws.com/fcc-john-steinbeck-tribute-page/images/the-pearl.jpg" alt="" class="novels-page__image--img">
+          </div>
+          <div class="novels-page__image--container novels-page__img-tc">
+            <img src="https://project-img-holder.s3.eu-west-2.amazonaws.com/fcc-john-steinbeck-tribute-page/images/travels-charley.jpg" alt="" class="novels-page__image--img">
+          </div>
+        </section>
+        <section class="novels-page__img-info">
+          <div class="novels-page__img-info-container novels-page__info-gow">
+            <h4 class="heading-small-lev--orange">
+              The Grapes of Wrath
+            </h4>
+            <p class="basic-text">
+              The Grapes of Wrath, Tom Joad and his family are forced from their farm in the Depression-era Oklahoma Dust Bowl and set out for California along with thousands of others in search of jobs, land, and hope for a brighter future. Considered John Steinbeck's masterpiece, The Grapes of Wrath is a story of human unity and love as well as the need for cooperative rather than individualistic ideals during hard times.
+            </p>
+          </div>
+          <div class="novels-page__img-info-container novels-page__info-omm">
+            <h4 class="heading-small-lev--orange">
+              Of Mice and Men
+            </h4>
+            <p class="basic-text">
+              Of Mice and Men is centred around two itinerant workers, George and Lennie, in California in the 1930s as they start work on a ranch in a place called Soledad (a Spanish word meaning ‘solitude’). The whole story takes place over a period of four days, starting on Thursday evening and ending on Sunday. While at the ranch, George and Lennie meet other characters, who emphasise the loneliness and difficulty of life for the people living and working in these places.
+            </p>
+          </div>
+          <div class="novels-page__img-info-container novels-page__info-tp">
+            <h4 class="heading-small-lev--orange">
+              The Pearl
+            </h4>
+            <p class="basic-text">
+              The Pearl, which takes place in La Paz, Mexico, begins with a description of the seemingly idyllic family life of Kino, his wife Juana and their infant son, Coyotito. Kino watches as Coyotito sleeps, but sees a scorpion crawl down the rope that holds the hanging hammock where Coyotito lies. Kino attempts to catch the scorpion, but Coyotito bumps the rope and the scorpion falls on him. Although Kino kills the scorpion, it still stings Coyotito. Juana and Kino, accompanied by their neighbors, go to see the local doctor, who refuses to treat Coyotito because Kino cannot pay enough to sustain the greedy needs of the Doctor.
+            </p>
+          </div>
+          <div class="novels-page__img-info-container novels-page__info-tc">
+            <h4 class="heading-small-lev--orange">
+              Travels with Charley in Search of America
+            </h4>
+            <p class="basic-text">
+              Steinbeck opened the book by describing his lifelong wanderlust and his preparations to rediscover the country he felt he had lost touch with after living in New York City and traveling in Europe for 20 years. He was 58 years old in 1960 and nearing the end of his career, but he felt that when he was writing about America and its people he "was writing of something [he] did not know about, and it seemed to [him] that in a so-called writer this is criminal" (p. 6). He bought a new GMC pickup truck, which he named Rocinante, and had it fitted with a custom camper-shell for his journey.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="facts-page u-padding-bottom-large u-padding-top-large">
+      <div class="u-padding-top-large">
+        <hr class="line-break">
+        <h3 class="heading-section-lev u-padding-bottom-small u-padding-top-small">
+          Four Fascinating Facts
+        </h3>
+        <hr class="line-break">
+        <p class="basic-text--center basic-text--hover u-padding-top-medium">
+          Hover over the card to see more information about the fact.
+        </p>
+        <div class="u-padding-bottom-large u-padding-top-large">
+          <section class="facts-page__card-stack">
+            <div class="facts-page__card-outer">
+              <div class="facts-page__card-inner">
+                <div class="facts-page__card--front facts-page__card--front-01">
+                  <h5 class="heading-number-lev u-padding-bottom-small-vh">01</
