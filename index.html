@@ -78,32 +78,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animasi Bintang</title>
+    <title>Starry Background</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100%;
-            background: black;
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            top: 0;
-            animation: fall 5s linear infinite;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
+    body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    height: 100%;
+    }
+    
+    #stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    box-shadow: 0 0 2px white;
+    }
+    
+    .stars1 {
+    box-shadow: 0 0 2px white, 50px 150px white, 200px 100px white, 300px 200px white, 400px 50px white;
+    animation: animateStar 50s linear infinite;
+    }
+    
+    @keyframes animateStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+    }
     </style>
-</head>
+    </head>
+    <body>
+    <div id="stars" class="stars1"></div>
+    </body>
 <body>
     <script>
         const starCount = 100;
